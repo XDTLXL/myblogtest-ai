@@ -1,0 +1,16 @@
+{
+  "name": "blog-auto-test",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Playwright 自动化：博客系统登录页 blog_login.html",
+  "scripts": {
+    "test": "playwright test",
+    "test:login": "playwright test tests/blog_login.spec.ts",
+    "test:headed": "playwright test --headed",
+    "test:report": "playwright test --reporter=json --output=test-results > results.json && node summarize-findings.js",
+    "show-report": "playwright show-report playwright-report"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.63.0"
+  }
+}

@@ -1,0 +1,7 @@
+node_modules/
+.npm-cache/
+playwright-report/
+test-results/
+results.json
+.playwright-mcp/
+*.log

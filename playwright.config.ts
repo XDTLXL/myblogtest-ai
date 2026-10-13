@@ -36,7 +36,19 @@ export default defineConfig({
 
   projects: [
     {
-      name: 'chromium',
+      // 登录页用例
+      name: 'login',
+      testMatch: /blog_login\.spec\.ts/,
+      use: {
+        ...devices['Desktop Chrome'],
+        locale: 'zh-CN',
+        timezoneId: 'Asia/Shanghai',
+      },
+    },
+    {
+      // 列表页用例
+      name: 'list',
+      testMatch: /blog_list\.spec\.ts/,
       use: {
         ...devices['Desktop Chrome'],
         locale: 'zh-CN',

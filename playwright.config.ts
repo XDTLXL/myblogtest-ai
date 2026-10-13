@@ -55,5 +55,15 @@ export default defineConfig({
         timezoneId: 'Asia/Shanghai',
       },
     },
+    {
+      // 编辑页用例
+      name: 'edit',
+      testMatch: /blog_edit\.spec\.ts/,
+      use: {
+        ...devices['Desktop Chrome'],
+        locale: 'zh-CN',
+        timezoneId: 'Asia/Shanghai',
+      },
+    },
   ],
 });
